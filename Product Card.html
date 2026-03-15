@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif; background: #f5f5f5;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 2rem; gap: 16px; flex-wrap: wrap;
+    }
+    .card {
+      background: #fff; border: 1px solid #e5e5e5;
+      border-radius: 18px; overflow: hidden;
+      width: 100%; max-width: 220px; transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-3px); }
+    .img-wrap {
+      height: 140px; background: #f0f9ff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; color: #aaa; position: relative;
+    }
+    .tag {
+      position: absolute; top: 10px; left: 10px;
+      font-size: 0.7rem; font-weight: 600; padding: 3px 10px;
+      border-radius: 999px; background: #fef9c3; color: #854d0e;
+    }
+    .body { padding: 1rem; }
+    .product-name { font-size: 0.95rem; font-weight: 600; color: #111; margin-bottom: 4px; }
+    .desc { font-size: 0.8rem; color: #888; margin-bottom: 12px; line-height: 1.5; }
+    .footer { display: flex; align-items: center; justify-content: space-between; }
+    .price { font-size: 1.1rem; font-weight: 600; color: #111; }
+    .btn {
+      padding: 6px 14px; border-radius: 999px;
+      background: #38BDF8; color: #fff; border: none;
+      font-size: 0.8rem; font-weight: 500; cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="img-wrap">
+      <span class="tag">Sale</span>
+      product image
+    </div>
+    <div class="body">
+      <p class="product-name">Wireless Headphones</p>
+      <p class="desc">Noise cancelling · 30hr battery</p>
+      <div class="footer">
+        <span class="price">$89.00</span>
+        <button class="btn">Add to cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="img-wrap" style="background:#f0fdf4;">
+      product image
+    </div>
+    <div class="body">
+      <p class="product-name">Mechanical Keyboard</p>
+      <p class="desc">Compact TKL · RGB backlit</p>
+      <div class="footer">
+        <span class="price">$129.00</span>
+        <button class="btn">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
