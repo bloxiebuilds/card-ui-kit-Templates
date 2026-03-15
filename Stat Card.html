@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stat Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 2rem; gap: 16px; flex-wrap: wrap;
+    }
+    .card {
+      background: #fff; border: 1px solid #e5e5e5;
+      border-radius: 16px; padding: 1.5rem;
+      width: 100%; max-width: 200px;
+    }
+    .label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .value { font-size: 2rem; font-weight: 600; color: #111; margin-bottom: 6px; }
+    .trend { font-size: 0.8rem; }
+    .up { color: #22c55e; }
+    .down { color: #ef4444; }
+    .neutral { color: #888; }
+  </style>
+</head>
+<body>
+  <!-- Card 1 — Revenue -->
+  <div class="card">
+    <p class="label">Total Revenue</p>
+    <p class="value">$24,830</p>
+    <p class="trend up">▲ 12.4% this month</p>
+  </div>
+
+  <!-- Card 2 — Users -->
+  <div class="card">
+    <p class="label">Active Users</p>
+    <p class="value">3,291</p>
+    <p class="trend down">▼ 2.1% this week</p>
+  </div>
+
+  <!-- Card 3 — Orders -->
+  <div class="card">
+    <p class="label">Orders</p>
+    <p class="value">847</p>
+    <p class="trend neutral">— No change</p>
+  </div>
+</body>
+</html>
