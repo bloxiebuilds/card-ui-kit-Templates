@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notification Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif; background: #f5f5f5;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 2rem;
+    }
+    .stack { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 340px; }
+    .card {
+      background: #fff; border: 1px solid #e5e5e5;
+      border-radius: 14px; padding: 1rem 1.25rem;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .card.unread { border-left: 3px solid #38BDF8; }
+    .icon {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .icon.blue { background: #e0f2fe; }
+    .icon.green { background: #dcfce7; }
+    .icon.amber { background: #fef9c3; }
+    .body { flex: 1; }
+    .top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+    .title { font-size: 0.9rem; font-weight: 600; color: #111; }
+    .time { font-size: 0.75rem; color: #aaa; white-space: nowrap; }
+    .msg { font-size: 0.82rem; color: #666; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="stack">
+    <div class="card unread">
+      <div class="icon blue">💬</div>
+      <div class="body">
+        <div class="top">
+          <p class="title">New message</p>
+          <span class="time">2m ago</span>
+        </div>
+        <p class="msg">Hey, just checking in on the project status...</p>
+      </div>
+    </div>
+    <div class="card unread">
+      <div class="icon green">✅</div>
+      <div class="body">
+        <div class="top">
+          <p class="title">Task completed</p>
+          <span class="time">1h ago</span>
+        </div>
+        <p class="msg">Your export is ready to download.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon amber">⚠️</div>
+      <div class="body">
+        <div class="top">
+          <p class="title">Storage warning</p>
+          <span class="time">3h ago</span>
+        </div>
+        <p class="msg">You've used 90% of your storage limit.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
